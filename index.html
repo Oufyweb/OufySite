@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html data-theme="valentine">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Web</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.7/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="script.js" defer></script>
+        <!-- Calendly link widget begin -->
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <!-- Calendly link widget end -->
+                <!-- Calendly link widget end -->
+                <style>
+                  .calendly-inline-widget {
+                      background-color: var(--primary); /* Adjust if your theme uses different variable names */
+                      /* or */
+                      /* background-color: transparent; */
+                  }
+        </style>
+
+
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+          <link
+              rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+              integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+              crossorigin="anonymous"
+            />
+      
+    </head>
+    <body class="mt-5 mb-5 lg:ml-48 md:ml-24 lg:mr-48 md:mr-24">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        
+        https://calendly.com/oufyweb
+        <![endif]-->
+
+        <div class="navbar bg-white bg-opacity-10 backdrop-blur-md rounded-box shadow">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a onclick="document.getElementById('about-us').scrollIntoView({behavior: 'smooth'});">Know Us</a></li>
+                  <li><a onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});">Connect</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-center">
+              <a class="btn btn-ghost text-xl" href="index.html">Oufy✨</a>
+            </div>
+            <div class="navbar-end">
+              <button class="btn btn-ghost btn-circle" onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    fill="currentColor"
+                    class="h-5 w-5"
+                    stroke="currentColor"
+                    viewBox="0 0 512 512">
+                    <title>Us</title>
+                    <path 
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"/>
+                    </svg>
+              </button>
+              <button class="btn btn-ghost btn-circle" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oufyweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=e78df8'});return false;">
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="currentColor"
+                    class="h-5 w-5"
+                    viewBox="0 0 128 128"
+                    stroke="currentColor">
+                    <title>Connect</title>
+                    <path 
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M96.14,12.47l-76.71-1.1,28.3,27.85L96.14,12.47ZM53.27,49l9.88,39.17L102.1,22,53.27,49ZM117,1.6a5.59,5.59,0,0,1,4.9,8.75L66.06,105.21a5.6,5.6,0,0,1-10.44-1.15L41.74,49,1.67,9.57A5.59,5.59,0,0,1,5.65,0L117,1.6Z"/>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="hero main-hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+            <div class="hero-content flex-col lg:flex-row">
+              
+                <div class="hero_hover_container">
+                  <div>
+                    <div class="hero_hover_content">
+                      <h2>Create</h2>
+                      <span>Script & Frames</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="hero_hover_content">
+                      <h2>Manage</h2>
+                      <span>Talent</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="hero_hover_content">
+                      <h2>Shoot</h2>
+                      <span>And Edit Content</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="hero_hover_content">
+                      <h2>Deliver</h2>
+                      <span>And Market</span>
+                    </div>
+                  </div>
+                </div>
+              <div>
+                <h1 class="text-5xl font-bold">Bringing Your Brand to Life with Creative Ads</h1>
+                <p class="py-6">Elevate Your Brand with Social Media Ads.  We Create : Images, videos, and product ads that drive results🚀.
+                </p>
+                <button class="btn btn-primary" onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});"
+                >Connect with Us</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5"  id="about-us">
+            <div class="hero-content text-center">
+              <div class="max-w-fit">
+                <h1 class="text-5xl font-bold">About Us</h1>
+                <p class="py-6">
+                  Welcome to Oufy! We're all about creating awesome social media ads that grab attention and build connections. Whether it's eye-catching image and graphic ads, engaging UGC videos, or informative educational content, we're here to make your brand shine. Our mission? To make your brand lovable to your audience. With our creative spark and strategic know-how, we're dedicated to delivering standout results for your brand. 
+                  <br>
+                  <br>
+                  Their is a quote that we love “Making a product and selling it is not a big deal, but executing it and selling it to the right audience is the real challenge.”
+                  <br>
+                  <br>
+                  So, shall we begin our journey? and create something amazing together!
+
+                </p>
+                <button class="btn btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oufyweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=e78df8'});return false;">Book a Call</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--          <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+            <div class="hero-content text-center">
+              <div class="max-w-fit">
+                <h1 class="text-5xl font-bold">Comprehensive Ad Solutions</h1>
+                <p class="py-6">
+                  Image ads: - Captivating Image & Graphic Ads-Custom designs that capture attention.Our eye-catching image ads on social media grab attention and encourage interaction. Whether they promote products, educate, show stats or boost engagement, they're designed to get people interested!
+
+                  <br>
+                  <br>
+                  Short Video Ads: -Impactful Short Video Ads-Memorable stories and UGC ads that boost engagement.Our ads are designed to make your products shine, attracting more attention and boosting sales. We offer great UGC(user-generated content) ads that build trust and connect well with your audience.
+
+                  <br>
+                  <br>
+                  Product ads:- Effective Product Ads-Showcase your products with high-quality visuals.Let us create ads that showcase your products beautifully, boosting their visibility and driving sales. 
+
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        -->
+
+          <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+            <div class="hero-content flex-col lg:flex-row-reverse w-full">
+                <div class="lg:w-1/2">
+                    <div class="carousel rounded-box w-full h-1/2">
+                        <div id="item1" class="carousel-item w-full h-full">
+                            <img src="static/wha_1.png" class="w-full h-full object-cover"/>
+                        </div>
+                        <div id="item2" class="carousel-item w-full h-full">
+                            <img src="static/can_ad.png" class="w-full h-full object-cover"/>
+                        </div>
+                        <div id="item3" class="carousel-item w-full h-full">
+                            <img src="static/elara_pearl.jpg" class="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-2 py-2">
+                        <a href="#item1" class="btn btn-xs">1</a>
+                        <a href="#item2" class="btn btn-xs">2</a>
+                        <a href="#item3" class="btn btn-xs">3</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:pr-8">
+                    <h1 class="text-5xl font-bold">Images and Product Ads</h1>
+                    <p class="py-6">
+                      Captivating Image & Graphic Ads-Custom designs that capture attention.Our eye-catching image ads on social media grab attention and encourage interaction. <br>Whether they promote products, educate, show stats or boost engagement, they're designed to get people interested!
+                      <br><br>
+                      Effective Product Ads-Showcase your products with high-quality visuals. <br>Let us create ads that showcase your products beautifully, boosting their visibility and driving sales. 
+
+
+                    </p>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});"
+                    >Get Started</button>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+        <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+          <div class="hero-content text-center">
+            <div class="max-w-fit">
+              <h1 class="text-5xl font-bold">Our Proven Process</h1>
+              <p class="py-6">
+                Consultation: We start by getting to know your brand, your audience, and your advertising goals.Research & Strategy: Next, we dive into market research and create a plan.
+                <br>
+                <br>
+                
+                Creative Development: Our creative team then jumps into action, designing and producing your ads.Review & Feedback: We share the first drafts of the ads with you for your input.
+                
+                <br>
+                <br>
+                Delivery of the Work: After your approval, we deliver the ads and the final product. We ensure everything meets your objectives.
+                
+                <br>
+                <br>
+                Analysis & Reporting: After the ads run, we analyze the results and provide you with detailed reports. This helps us understand what worked well and provides insights for future.
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+          <div class="hero-content flex-col lg:flex-row w-full">
+              <div class="lg:w-1/2">
+                  <div class="carousel rounded-box w-4/6 h-1/2">
+                      
+                      <div id="video2" class="carousel-item w-full h-full">
+                          <video class="w-full h-full object-cover" controls autoplay="false" muted>
+                              <source src="static/bag_sample_2_720p.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                      </div>
+                      <div id="video3" class="carousel-item w-full h-full">
+                          <video class="w-full h-full object-cover" controls autoplay="false" muted>
+                              <source src="static/tan_sample_1_720p.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                      </div>
+                      <div id="video4" class="carousel-item w-full h-full">
+                          <video class="w-full h-full object-cover" controls autoplay="false" muted>
+                              <source src="static/shoe_sample_720p.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                      </div>
+                  </div>
+                  <div class="flex justify-center gap-2 py-2">
+
+                      <a href="#video2" class="btn btn-xs">1</a>
+                      <a href="#video3" class="btn btn-xs">2</a>
+                      <a href="#video4" class="btn btn-xs">3</a>
+                  </div>
+              </div>
+              <div class="lg:w-1/2 lg:pr-8">
+                  <h1 class="text-5xl font-bold">Short Video Ads</h1>
+                  <p class="py-6">
+                    Impactful Short Video Ads-Memorable stories and UGC ads that boost engagement.Our ads are designed to make your products shine, attracting more attention and boosting sales. <br><br>We offer great UGC(user-generated content) ads that build trust and connect well with your audience.
+
+                  </p>
+                  <button class="btn btn-primary" onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});"
+                  >Get Started</button>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5">
+        <div class="hero-content flex-col lg:flex-row-reverse w-full">
+            <div class="lg:w-1/2">
+                <div class="carousel rounded-box w-full h-1/2">
+                    <div id="testimonial_1" class="carousel-item w-full h-full">
+                        <img src="static/testimonial_1.png" class="w-full h-full object-cover"/>
+                    </div>
+                    <div id="testimonial_2" class="carousel-item w-full h-full">
+                        <img src="static/testimonial_2.png" class="w-full h-full object-cover"/>
+                    </div>
+                    <div id="analytics_1" class="carousel-item w-full h-full">
+                        <img src="static/analytics_1.jpeg" class="w-full h-full object-cover"/>
+                    </div>
+                    <div id="analytics_2" class="carousel-item w-full h-full">
+                        <img src="static/analytics_2.jpeg" class="w-full h-full object-cover"/>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-2 py-2">
+                    <a href="#testimonial_1" class="btn btn-xs">1</a>
+                    <a href="#testimonial_2" class="btn btn-xs">2</a>
+                    <a href="#analytics_1" class="btn btn-xs">3</a>
+                    <a href="#analytics_2" class="btn btn-xs">4</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 lg:pr-8">
+                <h1 class="text-5xl font-bold">Testimonials & Analytics</h1>
+                <p class="py-6">
+                  Hear from our satisfied clients.
+                </p>
+                <button class="btn btn-primary" onclick="document.getElementById('contact-us').scrollIntoView({behavior: 'smooth'});"
+                >Get Started</button>
+            </div>
+        </div>
+      </div>
+          
+         
+
+
+
+    <div class="hero bg-base-200 min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow py-10 my-5 " id="contact-us">
+      <div class="hero-content text-center">
+        <div class="max-w-fit">
+          <h1 class="text-5xl font-bold">Contact Us</h1>
+          <p class="py-6">
+            Book a Discovery Call to discuss your advertising needs.            
+            <br>
+            Or<br> Mail us at : Oufyweb@gmail.com
+            <br>
+            <br>
+            <a href="mailto:oufyweb@gmail.com" class="btn btn-primary">
+              <i class="fa fa-envelope mr-2"></i>
+              Email Us
+            </a>
+          </p>
+
+
+          
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/oufyweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=fd9ef9" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+          
+          <!-- Calendly badge widget begin -->
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/oufyweb/30min?hide_event_type_details=1&hide_gdpr_banner=1', text: 'Book a Call with Us🤙', color: '#c95e6b', textColor: '#ffffff', branding: undefined }); }</script>
+          <!-- Calendly badge widget end -->
+          
+          <br>
+          <button class="btn btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oufyweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=e78df8'});return false;">Book a Call 👆</button>
+
+
+          <div class="flex items-center justify-center">
+            <div class="grid grid-cols-4 gap-4 my-5">
+              <button id="facebook" class="bg-white sticky duration-500 border-2 border-blue-600 fixed w-12 transform hover:-translate-y-3 h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600" onclick="window.open('https://www.facebook.com/profile.php?id=61559164744553', '_blank')">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              
+              <button id="instagram" class="border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-full hover:text-white bg-white text-pink-600 w-12 h-12 transform hover:-translate-y-3 rounded-full duration-500" onclick="window.open('www.instagram.com/weboufy/', '_blank')">
+                <i class="fab fa-instagram"></i>
+              </button>
+              
+              <button id="whatsapp" class="bg-white duration-500 w-12 h-12 border-2 rounded-full border-green-600 transform hover:-translate-y-3 text-2xl text-green-500 hover:bg-green-600 hover:text-white" onclick="window.open('https://wa.me/919205031564', '_blank')">
+                <i class="fab fa-whatsapp"></i>
+              </button>
+              
+              <button id="twitter" class="bg-white transform hover:-translate-y-3 border-2 w-12 h-12 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl" onclick="window.open('https://x.com/OufyRitik', '_blank')">
+                <i class="fab fa-twitter"></i>
+              </button>
+              
+            </div>
+          </div>
+          
+          <script>
+            tippy('#facebook', {
+              content: 'Facebook',
+              animation: 'fade',
+              delay: [200, 200]
+            });
+            tippy('#instagram', {
+              content: 'Instagram',
+              animation: 'fade',
+              delay: [200, 200]
+            });
+            tippy('#whatsapp', {
+              content: 'Whatsapp',
+              animation: 'fade',
+              delay: [200, 200]
+            });
+            tippy('#twitter', {
+              content: 'Twitter',
+              animation: 'fade',
+              delay: [200, 200]
+            });
+          </script>
+          
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="oufy-theme lg:flex-row-reverse">
+        <div class="p-6">
+            <h1 class="text-4xl font-bold">Oufy's Theme</h1>
+            
+            <div class="mt-4">
+                <label for="theme-select" class="block mb-2">Page theme :</label>
+                <select id="theme-select" class="select select-bordered  max-w-xs">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="cupcake">Cupcake</option>
+                    <option value="bumblebee">Bumblebee</option>
+                    <option value="emerald">Emerald</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="synthwave">Synthwave</option>
+                    <option value="retro">Retro</option>
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="valentine">Valentine</option>
+                    <option value="halloween">Halloween</option>
+                    <option value="garden">Garden</option>
+                    <option value="forest">Forest</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="lofi">Lofi</option>
+                    <option value="pastel">Pastel</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="wireframe">Wireframe</option>
+                    <option value="black">Black</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="cmyk">CMYK</option>
+                    <option value="autumn">Autumn</option>
+                    <option value="business">Business</option>
+                    <option value="acid">Acid</option>
+                    <option value="lemonade">Lemonade</option>
+                    <option value="night">Night</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="winter">Winter</option>
+                    <option value="dim">Dim</option>
+                    <option value="nord">Nord</option>
+                    <option value="sunset">Sunset</option>
+                </select>
+            </div>
+        </div>
+      </div>
+
+      <div class="bg-base-200 text-center py-4 text-sm min-h-fit bg-opacity-10 backdrop-blur-md rounded-box shadow">
+        All rights reserved © Oufy Web
+      </div>
+      
+
+
+
+
+
+    </body>
+</html>
