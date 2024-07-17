@@ -1,0 +1,6 @@
+
+# Exclude the "raw" folder in the "static" folder
+static/raw/
+
+# Exclude the "temp.html" file in the main directory
+temp.html
