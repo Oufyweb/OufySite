@@ -4,6 +4,7 @@
   justify-content: center;
   height: 500px;
   gap: 10px;
+  max-width: 100%;
 
   > div {
     flex: 0 0 120px;
@@ -13,6 +14,7 @@
     box-shadow: 1px 5px 15px #1e0e3e;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 
     &:nth-of-type(1) {
       background: url("https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg")
@@ -62,6 +64,7 @@
       flex: 0 0 250px;
       box-shadow: 1px 3px 15px #7645d8;
       transform: translatey(-30px);
+      max-width: 100%;
     }
 
     &:hover .hero_hover_content {
@@ -72,7 +75,6 @@
   }
 }
 
-
 .main-hero {
   position: relative;
   z-index: 1;
@@ -82,7 +84,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 .oufy-theme {
   display: flex;
