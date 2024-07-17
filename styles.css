@@ -1,13 +1,13 @@
 .hero_hover_container {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   height: 500px;
   gap: 10px;
-  max-width: 100%;
+  max-width: 80%;
 
   > div {
-    flex: 0 0 120px;
+    flex: 0 0 20%;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
